@@ -13,10 +13,10 @@
 # limitations under the License.
 
 import re
+from datetime import datetime
 from os import path
 
 import click
-import keepachangelog
 from splunk_packaging import bump_version, changelog_path, get_versions, root_path
 
 readme_path = path.join(root_path, "README.md")
@@ -65,6 +65,13 @@ def update_docs(versions):
     with open(readme_path, "w", encoding="utf-8") as readme:
         readme.write(markdown)
 
+def update_changelog(changelog_path, version):
+    release_title = '## {0} - {1}'.format(version, datetime.today().strftime("%Y-%m-%d"))
+    with open(changelog_path, "r+", encoding='utf-8') as f:
+        modified = f.read().replace('## Unreleased', '## Unreleased\n\n{0}'.format(release_title), 1)
+        f.seek(0)
+        f.write(modified)
+
 
 @click.command()
 @click.option(
@@ -75,7 +82,7 @@ def main(version):
     bump_version(version)
     versions = get_versions()
     update_docs(versions)
-    keepachangelog.release(changelog_path, versions.distro)
+    update_changelog(changelog_path, versions.distro)
 
 
 if __name__ == "__main__":

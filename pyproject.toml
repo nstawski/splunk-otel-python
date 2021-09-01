@@ -54,7 +54,6 @@ pylintfileheader = "^0.3.0"
 pytest-docker = "^0.10.3"
 requests-futures = "^1.0.0"
 githubrelease = "^1.5.8"
-keepachangelog = "^1.0.0"
 click = "^8.0.1"
 types-setuptools = "^57.0.0"
 
