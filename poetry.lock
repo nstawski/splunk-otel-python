@@ -786,7 +786,7 @@ testing = ["fields", "hunter", "process-tests", "six", "pytest-xdist", "virtuale
 
 [[package]]
 name = "pytest-docker"
-version = "0.11.0"
+version = "0.12.0"
 description = "Simple pytest fixtures for Docker and docker-compose based tests"
 category = "dev"
 optional = false
@@ -981,7 +981,7 @@ otlp = ["opentelemetry-exporter-otlp-proto-grpc"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "1211d5b44e0a00033cb96c551386b8cefdec8515823dc27ed5eec26d00d71db7"
+content-hash = "df20e878e98bc35a2a54b4ca6263de120c0329d1f46f694e89fc444dcca69727"
 
 [metadata.files]
 aiocontextvars = [
@@ -1550,8 +1550,8 @@ pytest-cov = [
     {file = "pytest_cov-2.12.1-py2.py3-none-any.whl", hash = "sha256:261bb9e47e65bd099c89c3edf92972865210c36813f80ede5277dceb77a4a62a"},
 ]
 pytest-docker = [
-    {file = "pytest-docker-0.11.0.tar.gz", hash = "sha256:7bcec98624ce55d9aea185942c2c0f58072551d7db1025aeec84dd288a3c0939"},
-    {file = "pytest_docker-0.11.0-py3-none-any.whl", hash = "sha256:bfd5d7337da467bcb58f17cf6077c2e5827af4eaade7c590ff4d4a0d5de42b21"},
+    {file = "pytest-docker-0.12.0.tar.gz", hash = "sha256:d9ae0d9cc41e0459931796f2fd7edb5e4fd859e2850d8530e0fd45b9259872e3"},
+    {file = "pytest_docker-0.12.0-py3-none-any.whl", hash = "sha256:7d1e9f8ff46a137808760749c5072fc10d2b71286df92a04e5455a43a74de99e"},
 ]
 python-dotenv = [
     {file = "python-dotenv-0.19.2.tar.gz", hash = "sha256:a5de49a31e953b45ff2d2fd434bbc2670e8db5273606c1e737cc6b93eff3655f"},
